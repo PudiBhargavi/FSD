@@ -7,7 +7,7 @@ function calculateDenomination() {
       const denomination = denominations[i];
       const count = Math.floor(amount / denomination);
       if (count > 0) {
-        result += `${count} ${denomination}'s\n`;
+        result += `\n${count} ${denomination}'s\n`;
         amount -= denomination * count;
       }
     }
