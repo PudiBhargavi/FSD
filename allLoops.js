@@ -1,6 +1,6 @@
 function allLoops(n){
     console.log("Using for loop");
-    for(let i=1;i<1;i++)
+    for(let i=1;i<11;i++)
         console.log(i);
     console.log("Using while loop");
     var j=1;
