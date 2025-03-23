@@ -1,0 +1,46 @@
+<h1>Rock Paper Scissors</h1>
+<button id="rock">Rock</button>
+<button id="paper">Paper</button>
+<button id="scissors">Scissors</button>
+<p id="result"></p>
+
+<script>
+  const rockButton = document.getElementById('rock');
+  const paperButton = document.getElementById('paper');
+  const scissorsButton = document.getElementById('scissors');
+  const resultParagraph = document.getElementById('result');
+
+  rockButton.addEventListener('click', playRock);
+  paperButton.addEventListener('click', playPaper);
+  scissorsButton.addEventListener('click', playScissors);
+
+  function playRock() {
+    playGame('rock');
+  }
+
+  function playPaper() {
+    playGame('paper');
+  }
+
+  function playScissors() {
+    playGame('scissors');
+  }
+
+  function playGame(userChoice) {
+    const choices = ['rock', 'paper', 'scissors'];
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    let result;
+    if (userChoice === computerChoice) {
+      result = `It's a tie! Both chose ${userChoice}.`;
+    } else if ((userChoice === 'rock' && computerChoice === 'scissors') ||
+               (userChoice === 'scissors' && computerChoice === 'paper') ||
+               (userChoice === 'paper' && computerChoice === 'rock')) {
+      result = `You win! ${userChoice} beats ${computerChoice}.`;
+    } else {
+      result = `Computer wins! ${computerChoice} beats ${userChoice}.`;
+    }
+
+    resultParagraph.textContent = result;
+  }
+</script>
