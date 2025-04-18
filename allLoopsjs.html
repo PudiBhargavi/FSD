@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>All loops can be run here</title>
+  <script>
+    function allLoops(n){
+      let output = "";
+      output += "Using for loop:\n";
+      for(let i=1;i<=n;i++)
+        output += i + "\n";
+      alert(output);
+
+      output = "Using while loop:\n";
+      var j=1;
+      while(j<=n){
+        output += j + "\n";
+        j++;
+      }
+      alert(output);
+
+      output = "Using do-while loop:\n";
+      var k=1;
+      do{
+        output += k + "\n";
+        k++;
+      } while(k<=n);
+      alert(output);
+    }
+    let n=10;
+    allLoops(n);
+  </script>
+</head>
+</html>
