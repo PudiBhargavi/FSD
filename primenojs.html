@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Prime Number Checker</title>
+        <script>
+            function isPrime(number){
+                for(i=2;i<number;i++)
+                if(number%i==0)
+                return false;
+            return false;
+            }
+            const input = prompt("Enter a number to check whether it's a prime number or not");
+            const num = parseInt(input);
+            if(isNaN(num)){
+                alert("That's not a valid number");
+            }else{
+                if(isPrime(num)){
+                    alert(num + "is a prime number.");
+                }else{
+                    alert(num + "is a not a prime number.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <h1> Prime number checker</h1>
+    <p>Open the browser prompt to enter a number.</p>
+    </body>
+</html>
