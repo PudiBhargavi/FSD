@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>It's me palindrome</title>
+  <script>
+    let str = prompt("Enter a string:");
+    const reversedStr = str.split('').reverse().join('');
+    if (str.toLowerCase() === reversedStr.toLowerCase()) {
+      alert(`${str} is a palindrome.`);
+    } else {
+      alert(`${str} is not a palindrome.`);
+    }
+  </script>
+</head>
+</html>
